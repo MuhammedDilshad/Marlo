@@ -4,7 +4,6 @@ export const MakePostController = async (req, res) => {
   try {
     const { shares, type } = req.body;
 
-    // Validate shares and type
     if (shares < 1 || shares > 100 || !["buy", "sell"].includes(type)) {
       return res.status(400).json({ error: "Invalid shares or trade type" });
     }

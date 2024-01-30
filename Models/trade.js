@@ -9,6 +9,7 @@ const tradeSchema = new mongoose.Schema({
   user_id: {
     type: Number,
     required: true,
+    unique: true,
   },
   symbol: {
     type: String,
@@ -25,7 +26,7 @@ const tradeSchema = new mongoose.Schema({
     required: true,
   },
   timestamp: {
-    type: Number,
+    type: Date,
     required: true,
   },
 });

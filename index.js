@@ -22,7 +22,7 @@ app.listen(port, () => {
   console.log("started");
 });
 
-app.use("/", TradeRoutes);
+app.use("/trades", TradeRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
